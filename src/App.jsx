@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react"
 import {NewTodoForm} from "./NewTodoForm"
-import {TodoList} from "./TodoList"
+import TodoList from "./TodoList"
 import "./styles.css"
 import { SearchTodoForm } from "./SearchTodoForm";
 import {SignIn} from "./SignIn";
 import React from "react";
-//import { DraggableTodoItem, DroppableTodoList } from './drag';
-//import { DndProvider } from 'react-dnd';
-//import { HTML5Backend } from 'react-dnd-html5-backend';
+// import { DraggableTodoItem, DroppableTodoList } from './drag';
+// import { DndProvider } from 'react-dnd';
+// import { HTML5Backend } from 'react-dnd-html5-backend';
 //import Edit from './Edit'
 
 
@@ -66,15 +66,15 @@ export default function App(){
       <div className="content">
         <TodoList todos={filteredTodos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
         <SignIn />
-        {/* <DndProvider backend={HTML5Backend}> */}
-        {/* <DroppableTodoList todos={todos} moveTodo={moveTodo} /> */}
-        {/* <DraggableTodoItem />
-        </DndProvider>
-      <h1>My Todo App</h1>
+        {/* <DndProvider backend={HTML5Backend}> 
+        <DroppableTodoList todos={todos} moveTodo={moveTodo} /> 
+        <DraggableTodoItem />
+        </DndProvider> */ }
+        <h1>陳冠吉 Todo App</h1>
       
-  <Edit /> */}
+        {/* <Edit />  */}
       </div>
-    </div>
+  </div>
   )
 
 

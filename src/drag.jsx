@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import {useDrag, useDrop} from 'react-dnd';
-//import { HTML5Backend } from 'react-dnd-html5-backend';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import {ItemTypes} from "./ItemTypes"
 
 const DraggableTodoItem = ({ id, text, index, }) => {
