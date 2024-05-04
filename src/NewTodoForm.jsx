@@ -1,31 +1,33 @@
-import {useState} from "react"
-import React from "react";
+import { useState } from "react"
+import React from "react"
+// import "./word.css"
 
-export function NewTodoForm (props) {  
-    
-    const [newItem, setNewItem] =  useState("")
+export function NewTodoForm({ handleUpdateTime, onSubmit }) {
+   const [newItem, setNewItem] = useState("")
 
-    function handleSubmit (e){
-        e.preventDefault()
-        if (newItem === "") return
+   function handleSubmit(e) {
+      e.preventDefault()
+      if (newItem === "") return
 
-        props.onSubmit (newItem)
-    
-        setNewItem ("")
-      }
-    
-    return (
-    <form onSubmit={handleSubmit} className="new-item-form">
-    <div className="form-row">
-      <label htmlFor="item">New Item</label>
-      <input 
-      value={newItem}
-      onChange={e => setNewItem (e.target.value)}
-      type="text"  
-      id="item"
-      />
-    </div>
-    <button className="btn">Add</button>
-  </form>
-  )
+      onSubmit(newItem)
+
+      setNewItem("")
+   }
+
+   return (
+      <form onSubmit={handleSubmit} className="new-item-form">
+         <div className="form-row">
+            <label htmlFor="item">New Item</label>
+            <input
+               value={newItem}
+               onChange={(e) => setNewItem(e.target.value)}
+               type="text"
+               id="item"
+            />
+         </div>
+         <button className="btn" onClick={handleUpdateTime}>
+            Add
+         </button>
+      </form>
+   )
 }
