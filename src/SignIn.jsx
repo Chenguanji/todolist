@@ -24,29 +24,29 @@ export function SignIn() {
    )
 }
 
-/*import React , {useEffect, useState} from "react";
-import { auth, provider } from "./config";
-import { signInWithPopup } from "firebase/auth";
-import App from "./App";
+// import React, { useEffect, useState } from "react"
+// import { auth, provider } from "./config"
+// import { signInWithPopup } from "firebase/auth"
+// import App from "./App"
 
-export function SignIn() {
-    const [value, setValue] = useState(localStorage.getItem("email") || "");
+// export function SignIn() {
+//    const [value, setValue] = useState(localStorage.getItem("email") || "")
 
-    const handleClick = () => {
-        signInWithPopup(auth, provider).then((data) => {
-            const userEmail = data.user.email;
-            setValue(userEmail);
-            localStorage.setItem("email", userEmail);
-        });
-    };
+//    const handleClick = () => {
+//       signInWithPopup(auth, provider).then((data) => {
+//          const userEmail = data.user.email
+//          setValue(userEmail)
+//          localStorage.setItem("email", userEmail)
+//       })
+//    }
 
-    return (
-        <div>
-            {value ? (
-                <App />
-            ) : (
-                <button onClick={handleClick}>Sign in with Google</button>
-            )}
-        </div>
-    );
-}*/
+//    return (
+//       <div>
+//          {value ? (
+//             <App />
+//          ) : (
+//             <button onClick={handleClick}>Sign in with Google</button>
+//          )}
+//       </div>
+//    )
+// }

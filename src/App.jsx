@@ -3,14 +3,9 @@ import { NewTodoForm } from "./NewTodoForm"
 import TodoList from "./TodoList"
 import "./styles.css"
 import { SearchTodoForm } from "./SearchTodoForm"
-import { SignIn } from "./SignIn"
 import React from "react"
 import "./word.css"
-
-// import { DraggableTodoItem, DroppableTodoList } from './drag';
-// import { DndProvider } from 'react-dnd';
-// import { HTML5Backend } from 'react-dnd-html5-backend';
-//import Edit from './Edit'
+import { SignIn } from "./SignIn"
 
 export default function App() {
    const [lastEditedTime, setLastEditedTime] = useState(new Date())
@@ -52,14 +47,6 @@ export default function App() {
       }, [])
    }
 
-   const moveTodo = (dragIndex, hoverIndex) => {
-      const draggedTodo = todos[dragIndex]
-      const newTodos = [...todos]
-      newTodos.splice(dragIndex, 1)
-      newTodos.splice(hoverIndex, 0, draggedTodo)
-      setTodos(newTodos)
-   }
-
    return (
       <div className="container">
          <div className="control">
@@ -72,13 +59,14 @@ export default function App() {
                handleUpdateTime={handleUpdateTime}
             />
          </div>
+         <SignIn />
          <div className="content">
             <TodoList
                todos={filteredTodos}
                toggleTodo={toggleTodo}
                deleteTodo={deleteTodo}
             />
-            <SignIn />
+
             <p className="LastEditedTime">
                Last edited: {lastEditedTime.toLocaleString()}
             </p>
